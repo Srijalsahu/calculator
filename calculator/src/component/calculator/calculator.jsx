@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './calculator.module.css';
 import { evaluate } from 'mathjs';
+import math from 'mathjs';
 
 function Calculator() {
   const [input, setInput] = useState('');
@@ -11,13 +12,13 @@ function Calculator() {
 
   const calculateResult = () => {
     try {
-      let result = evaluate(input);
+      let result = math.evaluate(input);
       // Check for special cases: division by zero and zero by zero
       if (!Number.isFinite(result)) {
         if (isNaN(result)) {
           // Handle zero by zero case
           setInput('NaN');
-        } else {
+        } else if (result === Infinity) {
           // Handle division by zero case
           setInput('Infinity');
         }
