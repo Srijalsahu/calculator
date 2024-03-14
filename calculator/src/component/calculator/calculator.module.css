@@ -1,0 +1,23 @@
+.calculator {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .buttons {
+    display: flex;
+  }
+  
+  .buttons button {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
