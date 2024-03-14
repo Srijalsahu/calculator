@@ -1,23 +1,16 @@
-.calculator {
-    width: 300px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-  
-  .input {
+/* calculator.module.css */
+.input {
     width: 100%;
+    padding: 10px;
     margin-bottom: 10px;
   }
   
-  .buttons {
+  .buttonContainer {
     display: flex;
   }
   
-  .buttons button {
+  button {
     flex: 1;
-    margin: 5px;
     padding: 10px;
-    font-size: 18px;
   }
   
