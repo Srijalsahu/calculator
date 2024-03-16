@@ -12,15 +12,10 @@ const Calculator = () => {
           throw new Error('Incomplete Expression');
         }
         const result = eval(input);
-        if (!isFinite(result)) {
-          if (result === Infinity) {
-            setInput('Infinity');
-          } else {
-            setInput('NaN');
-          }
-        } else {
-          setInput(result.toString());
+        if (isNaN(result)) {
+          throw new Error('Invalid Expression');
         }
+        setInput(result.toString());
         setError(false);
       } catch (error) {
         setInput('');
