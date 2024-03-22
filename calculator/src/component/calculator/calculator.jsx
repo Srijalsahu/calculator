@@ -15,6 +15,10 @@ const Calculator = () => {
   };
 
   const printResult = () => {
+    if (!inputValue.trim()) {
+      setResult("Error");
+      return;
+    }
     try {
       const ans = eval(inputValue);
       if (isNaN(ans) || !isFinite(ans)) {
